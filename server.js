@@ -5,7 +5,7 @@ var methodOverride = require("method-override");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT;
+var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -40,6 +40,5 @@ app.set("view engine", "handlebars");
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-    console.log(process.env.JAWSDB_URL);
   });
 });
