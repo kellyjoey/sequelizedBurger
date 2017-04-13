@@ -5,7 +5,7 @@ var methodOverride = require("method-override");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT;
 
 // Requiring our models for syncing
 var db = require("./models");
