@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <h1>Eat-Da-Burger!</h1>
+</div>
+
+
+
+<div class="col-md-4 text-center panel burgersToEatList">
+<h2>Burgers to Eat!</h2>
+
+<ul>
+  
+  {{#each burger}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.burger_name}}
+        <div class = "burgerData" id="toBeDevoured_{{this.id}}">
+        <form>
+          {{!-- <input type="hidden" name="devoured" value="true"> --}}
+          <button class="btn btn-default" id = "devourIt" type="submit" data-burgerId="{{this.id}}" data-devoured="true">Devour It!</button>
+        </form>
+        </div>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+
+<div class="col-md-4 text-center panel">
+  <h2>Add a Burger</h2>
+    <form class="create-update-form" action="/api/burgers" method="POST">
+      <div class="form-group">
+        <label for="burg">Burger Name:</label>
+        <input type="text" id="burger_name" name="burger_name">
+      </div>
+      <button class="btn btn-default" type="submit">Add Burger</button>
+    </form> 
+ </div>   
+
+<div class="col-md-4 text-center panel burgersEatenList">
+<h2>Burgers I've Eaten!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if this.devoured}}
+      <li>
+        {{this.burger_name}}
+
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+
+<script type="text/javascript" src="/assets/js/index.js"></script>

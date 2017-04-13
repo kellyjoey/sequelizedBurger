@@ -1,0 +1,51 @@
+body {
+  background: url("../images/burger.png");
+}
+
+.jumbotron {
+	text-align: center;
+	margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+h1, h2{
+	color: white;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background-color: #f78f1e;
+  font-weight: bolder;
+  border-radius: 10%;
+  list-style: none;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: #333333;
+  border-radius: 10%;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 5px;
+
+}
+
+.panel {
+  background: none;
+
+}
+
+#burger_name{
+  color: black;
+}

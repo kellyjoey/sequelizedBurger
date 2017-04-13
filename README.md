@@ -1,2 +1,2 @@
-# sequelizedBurger
-Sequelizing the burger app
+# burger
+a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM 
